@@ -11,6 +11,7 @@
 import React from 'react';
 import type {
   MediaEventType,
+  MediaEventMap,
   EventListener,
 } from '@mediaforge/media-core';
 import { useMediaClient } from './MediaProvider.js';
@@ -32,7 +33,7 @@ export function useMediaEvents<K extends MediaEventType>(
   callbackRef.current = callback;
 
   React.useEffect(() => {
-    const stableListener: EventListener<K> = (data) => {
+    const stableListener: EventListener<K> = (data: MediaEventMap[K]) => {
       callbackRef.current(data);
     };
 

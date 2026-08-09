@@ -10,7 +10,7 @@
     "build": "corepack pnpm -r run build",
     "typecheck": "corepack pnpm -r run typecheck",
     "test": "corepack pnpm -r run test",
-    "validate": "corepack pnpm run typecheck && node scripts/check-architecture.cjs && corepack pnpm run test && corepack pnpm run build"
+    "validate": "corepack pnpm run build && node scripts/check-architecture.cjs && corepack pnpm run test && corepack pnpm run typecheck"
   },
   "devDependencies": {
     "typescript": "^5.4.5"
