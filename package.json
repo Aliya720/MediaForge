@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "description": "MediaForge — Small headless media SDK ecosystem built around the Pexels API",
+  "packageManager": "pnpm@9.15.4",
   "scripts": {
     "dev": "corepack pnpm --filter web dev",
     "start": "corepack pnpm --filter web dev",
