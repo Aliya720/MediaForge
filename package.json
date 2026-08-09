@@ -1,0 +1,21 @@
+{
+  "name": "mediaforge-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "MediaForge — Small headless media SDK ecosystem built around the Pexels API",
+  "scripts": {
+    "dev": "corepack pnpm --filter web dev",
+    "start": "corepack pnpm --filter web dev",
+    "build": "corepack pnpm -r run build",
+    "typecheck": "corepack pnpm -r run typecheck",
+    "test": "corepack pnpm -r run test",
+    "validate": "corepack pnpm run typecheck && node scripts/check-architecture.cjs && corepack pnpm run test && corepack pnpm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}
